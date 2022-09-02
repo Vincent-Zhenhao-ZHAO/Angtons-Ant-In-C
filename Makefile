@@ -7,7 +7,7 @@ DEPS = langton.h visualiser.h
 all: library langton.o visualiser.o main.o $(DEPS)
 	$(CC) -o ant main.o visualiser.o -L. -lant -lncurses -Wl,-rpath,.
 
-test: library tests/test.o $(DEPS) 
+test: library test.o $(DEPS) 
 	$(CC) -o test tests/test.o -L. -lant -lncurses -Wl,-rpath,.
 	./test
 
